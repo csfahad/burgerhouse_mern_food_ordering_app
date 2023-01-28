@@ -1,0 +1,49 @@
+@import "colors";
+
+nav {
+    height: 5rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.229);
+    background-color: white;
+
+    >div {
+        display: flex;
+        align-items: center;
+
+        >svg {
+            color: $orange;
+            font-size: 3rem;
+        }
+
+        >a {
+            margin: 0 2rem;
+            color: $dark;
+            transition: color 0.2s;
+            &:hover {
+                color: $orange;
+            }
+
+            >svg {
+                color: $orange;
+                transition: inherit;
+                font-size: 1.5rem;
+                &:hover {
+                    color: $lightdark;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.229);
+        >div > a{
+            margin: 0 0.6rem;
+        }
+    }
+}

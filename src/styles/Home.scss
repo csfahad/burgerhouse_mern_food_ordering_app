@@ -1,0 +1,64 @@
+@import "colors";
+
+.home {
+    height: 80vh;
+    overflow-x: hidden;
+    
+    div {
+        padding-left: 8rem;
+        padding-top: 15rem;
+        >h1 {
+            font-size: 4rem;
+        }
+        >p {
+            font-size: 1.2rem;
+        }
+    }
+    
+    >a{
+        display: block;
+        margin: 2rem 8rem;
+        width: 10rem;
+        background-color: $orange;
+        color: white;
+        text-align: center;
+        border: none;
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 0.7rem;
+        cursor: pointer;
+        &:hover {
+            background-color: $orangedark;
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: url("../assets/bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0%;
+        z-index: -1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home {
+        height: 55vh;
+        >div {
+            text-align: center;
+            padding-top: 10rem;
+            padding-left: 0rem;
+            >h1 {
+                font-size: 3rem;
+            }
+        }
+        >a {
+            margin: 2rem auto;
+        }
+    }
+}
+

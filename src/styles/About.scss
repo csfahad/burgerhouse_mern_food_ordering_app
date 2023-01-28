@@ -1,0 +1,100 @@
+@import "colors";
+
+.about {
+  width: 100%;
+
+  > main {
+    background-color: white;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+
+    > div {
+      background-color: $orange;
+      padding: 2rem;
+      color: white;
+      border-radius: 30px;
+      margin-top: 70px;
+      margin-bottom: 70px;
+
+      > h2 {
+        text-align: center;
+        color: $dark;
+        font-size: 2.5rem;
+      }
+
+      > article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        > a {
+          background-color: $dark;
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 2.5rem;
+          height: 2.5rem;
+          color: white;
+          font-size: 1.5rem;
+          transition: all 0.3s;
+          margin: auto;
+          &:hover {
+            color: $orange;
+            transform: scale(1.1);
+          }
+        }
+
+        > div {
+          margin: 2rem;
+          > img {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          > h3 {
+            margin: 1rem;
+            text-align: center;
+            color: $dark;
+          }
+        }
+        > p {
+          margin: 0 1rem;
+          width: 50%;
+          font-weight: 500;
+          letter-spacing: 2px;
+          line-height: 150%;
+          text-align: center;
+          color: $dark;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about > main {
+
+    > div {
+      margin-top: auto;
+      margin-bottom: auto;
+      border-radius: 0;
+    }
+
+    > div > article {
+      flex-direction: column;
+
+      > p {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

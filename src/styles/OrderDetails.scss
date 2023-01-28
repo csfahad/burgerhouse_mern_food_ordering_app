@@ -1,0 +1,88 @@
+@import "colors";
+
+.orderDetails {
+    background-color: white;
+    width: 100%;
+    // margin-top: 40px;
+    margin-bottom: 70px;
+
+    > main {
+        background-color: $orange;
+        max-width: 900px;
+        margin: auto;
+        padding: 2rem;
+        overflow-x: auto;
+        border-radius: 30px;
+
+        >h1 {
+            // text-transform: uppercase;
+            text-align: center;
+            font-size: 2rem;
+            margin: 3rem;
+            letter-spacing: 2px;
+        }
+
+        >div {
+            margin: 2rem 0;
+            text-align: center;
+            >h1 {
+                font-size: 1.5rem;
+                // text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            >p{
+                // text-transform: uppercase;
+                font-weight: 400;
+                white-space: nowrap;
+                letter-spacing: 2px;
+                margin: 2rem;
+                >b {
+                    margin-right: 5px;
+                    text-align: center;
+                }
+            }
+        }
+        > article{
+            > h1 {
+                font-size: 1.5rem;
+                letter-spacing: 2px;
+                margin: 2rem 0;
+                text-align: center;
+            }
+
+            >div {
+                background-color: rgb(246, 246, 246);
+                margin: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                border-radius: 10px;
+
+                >h4{
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .orderDetails{
+        margin-bottom: 0;
+        > main {
+            border-radius: 0;
+        }
+    }
+    .orderDetails > main > h1 {
+        font-size: 1.8rem;
+    }
+    .orderDetails > main > div {
+        >p {
+            letter-spacing: 1px;
+            font-size: 1rem;
+            margin: 2rem 0;
+        }
+    }
+}
